@@ -40,7 +40,7 @@ export default class HomePage extends Component {
           )}        
         </select>
         <div id="posting">
-          <Link to="/register">I'd like to post an event, job, apt, car, etc.</Link>
+          <Link to="/register">I'd like to post a posting</Link>
         </div>
       </div>
     )

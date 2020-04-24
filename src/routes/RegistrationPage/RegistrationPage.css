@@ -1,0 +1,9 @@
+.RegistrationPage {
+  margin: 0 20%;
+}
+
+@media screen and (max-width: 500px) {
+  .RegistrationPage {
+    margin: 0 10%;
+  }
+}

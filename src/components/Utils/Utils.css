@@ -12,8 +12,7 @@
   margin: 10px 0;
   padding: 10px;
   text-align: left;
-  max-width: 80%;
-  min-width: 40%;
+  width: 100%;
   border-radius: 4px;
   background-color: rgb(228, 221, 221);
   font-size: 1.2em;
