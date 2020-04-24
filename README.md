@@ -1,5 +1,8 @@
 # Qovun Client
 
+The app will eventually help connect Uzbek-Americans, people interested in Uzbek tradition and/or communities
+and help organize events and meetups, although the app is at the beginning stage right now.
+
 Live: https://qovun.now.sh/
 
 ## Setting Up
