@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200, 400');
+@import url('https://fonts.googleapis.com/css?family=Lustria');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: yellow;
+  position: relative;
+  background-image: url('./background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#root{
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  max-height: fit-content;
+  padding: 1% 5%;  
+  background: rgba(0,0,0,.5);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lustria";
+  font-weight: 100;
+  color: yellow;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+p {
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.blue {
+  color: #477ACC;
+}
+
+.yellow {
+  color: #EAC435;
+}
+
+.green {
+  color: #09a55e;
+}
+
+.red {
+  color: #CA1551;
+}
+
+.orange {
+  color: #FB4D3D;
+}
+#afterLoginNav{
+  padding-left: 0;
+}
+.App__main{
+  padding-bottom: 60px;
+}

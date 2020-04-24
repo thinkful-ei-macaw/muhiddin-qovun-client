@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "alias": "muhiddin-qovun-app",
+  "name": "qovun-app",
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
+}

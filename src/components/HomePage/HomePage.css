@@ -1,0 +1,44 @@
+#homepage {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#posts {
+  font-size: 0.9em;
+  margin-right: 20px;
+  border-radius: 7px;
+  padding: 3px;
+}
+#label {
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+#posting {
+  padding: 5px 15px;
+  margin-top: 50px;
+  display: inline-block;
+  border: 1px solid rgb(56, 130, 214);
+  border-radius: 25px;
+  background-color:rgb(56, 130, 214);
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#posting a {
+  text-decoration: none;
+}
+#posting:hover {
+  background-color: blue;
+}
+
+@media screen and (max-width: 490px) {
+  
+  #homepage {
+    display: inline-block;
+  }
+  #posts {
+    margin-top: 15px;
+  }
+  
+}

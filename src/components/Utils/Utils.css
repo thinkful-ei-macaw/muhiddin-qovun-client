@@ -1,0 +1,67 @@
+
+.Hyph {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.Input,
+.Textarea {
+  border: 1px solid #ddd;
+  display: block;
+  font-size: 1.1em;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: left;
+  max-width: 80%;
+  min-width: 40%;
+  border-radius: 4px;
+  background-color: rgb(228, 221, 221);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.Input::placeholder,
+.Textarea::placeholder {
+  color: #ccc;
+}
+
+.Textarea {
+  resize: vertical;
+}
+
+.Button {
+  color: white;
+  background: none;
+  font-size: 1.1em;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border: 2px solid white;
+}
+.Button:hover{
+  color: black;
+  background-color: white;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.Required {
+  color: #CA1551;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.Section {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.Section--list {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.NiceDate {
+  color: rgb(100, 207, 96);
+  font-weight: bold;
+  font-style: oblique;
+}
