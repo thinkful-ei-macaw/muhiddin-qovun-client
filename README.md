@@ -5,6 +5,10 @@ and help organize events and meetups, although the app is at the beginning stage
 
 Live: https://qovun.com/
 
+## Screenshots:
+
+![screenshot](Capture.png)
+
 ## Setting Up
 
 - Install dependencies: `npm install`
