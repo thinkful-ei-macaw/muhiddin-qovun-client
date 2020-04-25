@@ -3,11 +3,15 @@
 The app will eventually help connect Uzbek-Americans, people interested in Uzbek tradition and/or communities
 and help organize events and meetups, although the app is at the beginning stage right now.
 
-Live: https://qovun.com/
+Live: https://www.qovun.com/
 
-## Screenshots:
+## Screenshots
 
-![Screenshot](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/capture.png)
+![Screenshots](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/screenshot.png)
+
+## Technologies
+
+  HTML, CSS, React, NodeJS, Express, PostgreSQL
 
 ## Setting Up
 
