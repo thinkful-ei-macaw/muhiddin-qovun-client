@@ -7,7 +7,7 @@ Live: https://qovun.com/
 
 ## Screenshots:
 
-![screenshot](capture.png)
+![Screenshot](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/capture.png)
 
 ## Setting Up
 
