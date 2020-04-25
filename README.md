@@ -7,7 +7,7 @@ Live: https://qovun.com/
 
 ## Screenshots:
 
-![screenshot](./Capture.png)
+![screenshot](capture.png)
 
 ## Setting Up
 
