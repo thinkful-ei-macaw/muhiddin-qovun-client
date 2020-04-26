@@ -6,8 +6,7 @@
 }
 
 .App__header {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px
 }
 
 .App__main {

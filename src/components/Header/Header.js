@@ -30,7 +30,7 @@ export default class Header extends Component {
         </Link>
         <Link
           to='/register'>
-          Register
+          Sign Up
         </Link>
       </div>
     )
@@ -39,6 +39,7 @@ export default class Header extends Component {
   render() {
     return <>
       <nav className='Header'>
+        <div>
         <h1>
           <Link to='/'>
             <img src={logo} alt=''/>
@@ -46,11 +47,10 @@ export default class Header extends Component {
             <span id="qovun">Qovun</span>
           </Link>
         </h1>
-        <div className="LoginOut">
+        </div>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
-          : this.renderLoginLink()}
-        </div>          
+          : this.renderLoginLink()}        
       </nav>
       <h2 id="about">Browse/Post Anything About Uzbek Community in the US</h2>
     </>
