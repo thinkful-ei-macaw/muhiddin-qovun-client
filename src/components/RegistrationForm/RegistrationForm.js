@@ -36,7 +36,7 @@ export default class RegistrationForm extends Component {
     const { error } = this.state
     return (
       <form
-        className='RegistrationForm' id='RegForm'
+        className='RegistrationForm'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
