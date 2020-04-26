@@ -61,7 +61,7 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 600px) {
   .Header {
     vertical-align: middle;
 

@@ -29,7 +29,7 @@ export default class Header extends Component {
           Log in
         </Link>
         <Link
-          to='/register'>
+          to='/register' href='#RegForm'>
           Sign Up
         </Link>
       </div>
