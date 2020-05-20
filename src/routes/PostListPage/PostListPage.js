@@ -18,7 +18,6 @@ export default class PostListPage extends Component {
   renderPosts() {
     const section = this.props.match.params.section; 
     const { postList = [] } = this.context;
-    // eslint-disable-next-line array-callback-return
     return postList.map(post => {
       if(post.section.toLowerCase() === section)
         return (<PostListItem

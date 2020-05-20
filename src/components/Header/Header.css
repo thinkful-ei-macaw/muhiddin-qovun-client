@@ -8,6 +8,7 @@
 .Header h1 {
   margin: 0;
   font-weight: bold;
+  font-size: 1em;
 }
 #qovun {
   vertical-align: middle;
@@ -38,12 +39,9 @@
 .Header__not-logged-in a:first-child,
  .Header__not-logged-in a:last-child,
  .Header__logged-in a {
-  color: rgb(255, 255, 255);
-  padding: 10px 30px;
-  border-radius: 25px;
-  border: 2px solid white;
-  font-weight: bold;
-  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  margin-left: 5px;
 }
 
 .Header__not-logged-in a:first-child:hover, 
@@ -54,32 +52,16 @@
   transition: all 0.5s ease-in-out 0s
 }
 
+.Header__not-logged-in a:first-child:focus, 
+.Header__not-logged-in a:last-child:focus {
+  background-color: white;
+  color: black;
+}
+
 #about {
   margin: 20px 40px;
   font-size: 1.2em;
-  color: rgb(130, 204, 45);
+  color: rgb(148, 233, 233);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media (max-width: 600px) {
-  .Header {
-    vertical-align: middle;
-
-  }
-  .Header:first-child a {
-    padding: 5px;
-    border-radius: 3px;
-    border: none;
-    font-weight: normal;
-  }
-  .Header h1{
-    font-size: 1em;
-  }
-  .Header__logged-in {
-    margin: 0;
-    padding-top: 10px;
-  }
-  #about {
-    padding-top: 20px;
-  }
-}

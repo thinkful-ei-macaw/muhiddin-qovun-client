@@ -4,3 +4,16 @@
   flex-wrap: wrap;
   margin-top: 60px;
 }
+.your-posts {
+  text-align: center;
+}
+
+.back-post {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+.back-post:hover {
+  background-color: black;
+  color: white;
+}

@@ -35,9 +35,9 @@ export default class PostPage extends Component {
   handleDelete = () => {
     const { post_id } = this.props.match.params;
     PostApiService.deletePost(post_id)
-      .then(this.context.setPost)
-      .catch(this.context.setError);
-    this.props.history.push('/post-history');
+      .then(this.context.clearPost)
+      .catch(this.context.setError)
+      .then(() => this.props.history.push('/post-history'))
   }
 
   render() {

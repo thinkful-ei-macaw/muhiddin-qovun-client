@@ -42,7 +42,17 @@ p {
   letter-spacing: 1px;
   font-size: 1.2em;
 }
-
+label {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  color: yellow;
+}
+a, select, option, input {
+  outline: none;
+}
+button, input[type="button"], a {
+  cursor: pointer;
+}
 .blue {
   color: #477ACC;
 }

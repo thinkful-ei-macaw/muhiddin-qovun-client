@@ -26,14 +26,20 @@ export default class UserPosts extends Component {
 
   render() {
     const { posts } = this.context;
-    return (      
-      <div className="UserPosts">        
+    return ( 
+      <div>
+        <div className="your-posts">
+    <button className="back-post" onClick={e => {e.preventDefault(); this.props.history.push('/')}}>
+      Go back</button>
+        <h2>YOUR POSTS</h2></div>     
+      <div className="UserPosts">
         {posts.map(post =>
         (<PostListItem
           key={post.post_id}
           post={post}
         />)
         )}
+      </div>
       </div>
       )
   }
