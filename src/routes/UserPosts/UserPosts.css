@@ -12,6 +12,8 @@
   padding: 5px 10px;
   border-radius: 10px;
   border: none;
+  background-color: white;
+  outline: none;
 }
 .back-post:hover {
   background-color: black;

@@ -60,7 +60,7 @@ const PostApiService = {
       )
   },
   getUserPosts() {
-    return fetch(`${config.API_ENDPOINT}/myposts`, {
+    return fetch(`${config.API_ENDPOINT}/user-posts`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
@@ -72,7 +72,7 @@ const PostApiService = {
       )
   },
   postPost(title, section, content) {
-    return fetch(`${config.API_ENDPOINT}/posts/addpost`, {
+    return fetch(`${config.API_ENDPOINT}/posts`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

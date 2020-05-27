@@ -12,7 +12,6 @@ export default class UserPosts extends Component {
   componentDidMount() {
 
     this.context.clearError();
-
     PostApiService.getUserPosts()
       .then(this.context.setPosts)
       .catch(this.context.setError);    

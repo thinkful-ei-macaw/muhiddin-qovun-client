@@ -39,10 +39,10 @@ class PostForm extends React.Component {
 
           <label htmlFor="post_category">Category:</label>
           <select id="section" name="section">
+            <option value="Events">Events</option>
             <option value="Jobs">Jobs</option>
             <option value="Apartments">Apartments</option>
             <option value="Cars">Cars</option>
-            <option value="Events">Events</option>
             <option value="Other">Other</option>
           </select>
 
