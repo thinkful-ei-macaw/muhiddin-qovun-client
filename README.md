@@ -13,14 +13,18 @@ Server repo: https://github.com/thinkful-ei-macaw/muhiddin-qovun-server
 
 ![Screenshots](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/screenshot.png)
 
-## Technologies
+Front-end technologies
+React, React Context API, React Router, HTML, CSS, CSS Flexbox, JavaScript
 
-  HTML, CSS, React, NodeJS, Express, PostgreSQL
+Server technologies
+Node, Express
 
-## Setting Up
+Data persistence
+PostgreSQL
 
-- Install dependencies: `npm install`
+Testing environments
+Mocha
 
-## Scripts
-
-- Start the application for development: `npm start`
+Hosting
+Client: now(zeit/vercel), godaddy.com(domain)
+Server/Database: heroku
