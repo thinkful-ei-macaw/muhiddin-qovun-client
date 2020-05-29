@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT,
+  API_ENDPOINT: "https://warm-plateau-88184.herokuapp.com/api",
   TOKEN_KEY: process.env.REACT_APP_API_KEY,
 };
