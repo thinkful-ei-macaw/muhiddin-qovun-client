@@ -9,27 +9,29 @@ Client repo: https://github.com/thinkful-ei-macaw/muhiddin-qovun-client
 
 Server repo: https://github.com/thinkful-ei-macaw/muhiddin-qovun-server
 
+Done by [Muhiddin](https://github.com/muhiddinsgithub)
+
 ## Screenshots
 
 ![Screenshots](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/screenshot.png)
 
-### Front-end technologies
+#### Front-end technologies
 
 React, React Context API, React Router, HTML, CSS, CSS Flexbox, JavaScript
 
-### Server technologies
+#### Server technologies
 
 Node, Express
 
-### Data persistence
+#### Data persistence
 
 PostgreSQL
 
-### Testing environments
+#### Testing environments
 
 Mocha
 
-### Hosting
+#### Hosting
 
 Client: now(zeit/vercel), godaddy.com(domain)
 Server/Database: heroku

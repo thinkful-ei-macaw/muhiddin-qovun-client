@@ -42,14 +42,21 @@ class App extends Component {
             ) : (
               <PublicOnlyRoute exact path={"/"} component={HomePage} />
             )}
-            <Route path={"/posts"} component={HomePage} />
-            <Route path={"/view/:section"} component={PostListPage} />
-            <PublicOnlyRoute path={"/login"} component={LoginPage} />
-            <PrivateRoute path={"/add-post"} component={PostForm} />
-            <PrivateRoute path={"/posts/edit/:post_id"} component={EditPost} />
-            <PrivateRoute path={"/myposts"} component={UserPosts} />
-            <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-            <Route path={"/posts/:post_id"} component={PostPage} />
+            <Route exact path={"/view/:section"} component={PostListPage} />
+            <PublicOnlyRoute exact path={"/login"} component={LoginPage} />
+            <PrivateRoute exact path={"/add-post"} component={PostForm} />
+            <PrivateRoute
+              exact
+              path={"/posts/edit/:post_id"}
+              component={EditPost}
+            />
+            <PrivateRoute exact path={"/myposts"} component={UserPosts} />
+            <PublicOnlyRoute
+              exact
+              path={"/register"}
+              component={RegistrationPage}
+            />
+            <Route exact path={"/posts/:post_id"} component={PostPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

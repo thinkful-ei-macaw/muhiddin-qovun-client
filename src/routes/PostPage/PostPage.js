@@ -39,7 +39,7 @@ export default class PostPage extends Component {
     PostApiService.deletePost(post_id)
       .then(this.context.clearPost)
       .catch(this.context.setError)
-      .then(() => this.props.history.push("/myposts"));
+      .then(() => this.props.history.push("/post-history"));
   };
 
   render() {
