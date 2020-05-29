@@ -21,7 +21,7 @@
   display: inline-block;
   border: 1px solid rgb(56, 130, 214);
   border-radius: 25px;
-  background-color:rgb(56, 130, 214);
+  background-color: rgb(56, 130, 214);
   transition: all 0.4s ease-in-out 0s;
 }
 
@@ -32,8 +32,7 @@
   background-color: blue;
 }
 
-@media screen and (max-width: 490px) {
-  
+@media screen and (min-width: 490px) {
   #homepage {
     display: inline-block;
     margin-top: 0;
@@ -41,5 +40,4 @@
   #posts {
     margin-top: 15px;
   }
-  
 }

@@ -2,11 +2,13 @@
   display: flex;
   justify-content: center;
 }
-.postForm{
+.postForm {
   max-width: 600px;
   margin: 0 auto;
 }
-#section, #content, #title {
+#section,
+#content,
+#title {
   display: flex;
   width: 100%;
   margin: 10px 0;
@@ -20,8 +22,9 @@
   resize: none;
 }
 
-.submit, .cancel {
-  background-color: #4CAF50;
+.submit,
+.cancel {
+  background-color: #4caf50;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -29,7 +32,8 @@
   cursor: pointer;
 }
 
-.submit:hover, .cancel:hover {
+.submit:hover,
+.cancel:hover {
   background-color: green;
   color: yellow;
   font-size: 1.1em;
@@ -37,15 +41,4 @@
 
 .cancel {
   margin-left: 20px;
-}
-
-@media screen and (max-width: 510px) {
-  #section, #content, #title {
-    display: flex;
-    width: 100%;
-    margin: 10px 0;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 1.1em;
-  }
 }

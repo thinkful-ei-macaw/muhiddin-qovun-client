@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:200, 400');
-@import url('https://fonts.googleapis.com/css?family=Lustria');
+@import url("https://fonts.googleapis.com/css?family=Lato:200, 400");
+@import url("https://fonts.googleapis.com/css?family=Lustria");
 
 * {
   box-sizing: border-box;
@@ -13,22 +13,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: yellow;
   position: relative;
-  background-image: url('./background.jpg');
+  background-image: url("./background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
 
-#root{
+#root {
   position: relative;
   z-index: 2;
   min-height: 100vh;
   max-height: fit-content;
-  padding: 1% 5%;  
-  background: rgba(0,0,0,.5);
+  padding: 1% 5%;
+  background: rgba(0, 0, 0, 0.5);
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lustria";
   font-weight: 100;
   color: yellow;
@@ -47,18 +52,23 @@ label {
   letter-spacing: 1px;
   color: yellow;
 }
-a, select, option, input {
+a,
+select,
+option,
+input {
   outline: none;
 }
-button, input[type="button"], a {
+button,
+input[type="button"],
+a {
   cursor: pointer;
 }
 .blue {
-  color: #477ACC;
+  color: #477acc;
 }
 
 .yellow {
-  color: #EAC435;
+  color: #eac435;
 }
 
 .green {
@@ -66,15 +76,19 @@ button, input[type="button"], a {
 }
 
 .red {
-  color: #CA1551;
+  color: #f50742;
+  background-color: yellow;
+  padding: 3px 5px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .orange {
-  color: #FB4D3D;
+  color: #fb4d3d;
 }
-#afterLoginNav{
+#afterLoginNav {
   padding-left: 0;
 }
-.App__main{
+.App__main {
   padding-bottom: 60px;
 }

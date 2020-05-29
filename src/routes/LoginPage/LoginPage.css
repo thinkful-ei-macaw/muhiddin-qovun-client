@@ -1,9 +1,9 @@
 .LoginPage {
-  margin: 0 35%;
+  margin: 0 5%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .LoginPage {
-    margin: 0 10%;
+    margin: 0 20%;
   }
 }

@@ -3,3 +3,9 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+
+.backDiv {
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+}
