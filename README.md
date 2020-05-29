@@ -9,6 +9,8 @@ Client repo: https://github.com/thinkful-ei-macaw/muhiddin-qovun-client
 
 Server repo: https://github.com/thinkful-ei-macaw/muhiddin-qovun-server
 
+Done by [Muhiddin](https://github.com/muhiddinsgithub)
+
 ## Screenshots
 
 ![Screenshots](https://github.com/thinkful-ei-macaw/muhiddin-qovun-client/blob/master/screenshot.png)
