@@ -11,9 +11,9 @@ and help organize events and meetups, although the app is at the beginning stage
 
 ## Demo credentials:
 
-- username: demouser
+- username: user
 
-- password: Demouser\$1
+- password: pass
 
 ## Screenshots
 
