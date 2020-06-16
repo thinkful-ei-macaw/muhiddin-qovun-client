@@ -1,7 +1,7 @@
 {
   "name": "qovun",
   "version": "0.0.1",
-  "description": "Starter code for learning about authentication.",
+  "description": "Qovun App",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
