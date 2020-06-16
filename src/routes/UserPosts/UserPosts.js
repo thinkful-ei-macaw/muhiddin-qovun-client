@@ -27,7 +27,7 @@ export default class UserPosts extends Component {
             className="back-post"
             onClick={(e) => {
               e.preventDefault();
-              this.props.history.push("/");
+              this.props.history.push("/home");
             }}
           >
             Go back
@@ -35,9 +35,11 @@ export default class UserPosts extends Component {
           <h2>MY POSTS</h2>
         </div>
         <div className="UserPosts">
-          {posts.map((post) => (
-            <PostListItem key={post.post_id} post={post} />
-          ))}
+          {posts.length === 0 ? (
+            <p>"No posts available!"</p>
+          ) : (
+            posts.map((post) => <PostListItem key={post.post_id} post={post} />)
+          )}
         </div>
       </div>
     );

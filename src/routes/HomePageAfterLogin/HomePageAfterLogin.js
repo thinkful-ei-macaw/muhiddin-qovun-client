@@ -11,7 +11,7 @@ class HomePageAfterLogin extends React.Component {
     name: "",
   };
   componentDidMount() {
-    AuthApiService.getName().then((res) => {
+    AuthApiService.getUserInfo().then((res) => {
       this.setState({ name: res.full_name });
     });
   }
@@ -21,6 +21,10 @@ class HomePageAfterLogin extends React.Component {
       <div className="HomePageAfterLogin">
         Welcome, {this.state.name}
         <ul id="afterLoginNav">
+          <li>
+            <Link to="/">all posts</Link>
+          </li>
+          |
           <li>
             <Link to="/myposts">my posts</Link>
           </li>{" "}

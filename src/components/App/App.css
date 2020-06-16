@@ -6,9 +6,18 @@
 }
 
 .App__header {
-  padding: 20px
+  padding: 20px;
 }
 
 .App__main {
   margin-top: 20px;
+}
+
+.error:before {
+  content: "*";
+}
+.error {
+  color: yellow;
+  background-color: red;
+  padding: 5px;
 }

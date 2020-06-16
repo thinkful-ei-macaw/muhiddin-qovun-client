@@ -31,12 +31,13 @@ class PostForm extends React.Component {
   };
 
   render() {
-    const { post } = this.context;
+    const { post, error } = this.context;
     let sections = ["Jobs", "Events", "Apartments", "Cars", "Other"];
     return (
       <div>
         <form className="postForm" onSubmit={this.handleSubmit}>
           <h1>Edit a post:</h1>
+          {error ? <p className="error">{error.error}</p> : ""}
           <label htmlFor="title">Title:</label>
           <input
             type="text"

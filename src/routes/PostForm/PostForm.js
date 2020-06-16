@@ -1,41 +1,37 @@
-import React from 'react';
-import PostContext from '../../contexts/PostContext';
-import PostApiService from '../../services/post-api-service';
-import { Button } from '../../components/Utils/Utils';
-import './PostForm.css';
-
+import React from "react";
+import PostContext from "../../contexts/PostContext";
+import PostApiService from "../../services/post-api-service";
+import { Button } from "../../components/Utils/Utils";
+import "./PostForm.css";
 
 class PostForm extends React.Component {
-  
   static contextType = PostContext;
-  
-  handleSubmit = event => {
-    event.preventDefault()
-    
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+
     const { title, content, section } = event.target;
-  
 
     PostApiService.postPost(title.value, section.value, content.value)
       .then(this.context.addPost)
       .then((post) => {
-        title.value = '';
-        section.value = '';
-        content.value = '';
-        this.props.history.push(`/posts/${post.post_id}`)
+        title.value = "";
+        section.value = "";
+        content.value = "";
+        this.props.history.push(`/posts/${post.post_id}`);
       })
-      .catch(this.context.setError)
-  }
+      .catch(this.context.setError);
+  };
 
   render() {
-    return(
+    const error = this.context.error;
+    return (
       <div>
-        <form 
-        className = 'postForm'
-        onSubmit={this.handleSubmit}
-        >
+        <form className="postForm" onSubmit={this.handleSubmit}>
           <h1>Add a post:</h1>
+          {error ? <p className="error">{error.error}</p> : ""}
           <label htmlFor="title">Title:</label>
-          <input type="text" id="title" name="title"/>
+          <input type="text" id="title" name="title" required />
 
           <label htmlFor="post_category">Category:</label>
           <select id="section" name="section">
@@ -47,18 +43,24 @@ class PostForm extends React.Component {
           </select>
 
           <label htmlFor="content">Description:</label>
-          <textarea id="content" name="content" aria-label='Write your post description..'
-          placeholder="Write your post description.." />
-          <Button className="submit">
-            Submit
-          </Button> 
-          <Button type="button" onClick={() => this.props.history.push('/')} className="cancel">
-           Cancel
-          </Button>         
+          <textarea
+            id="content"
+            name="content"
+            aria-label="Write your post description.."
+            placeholder="Write your post description.."
+            required
+          />
+          <Button className="submit">Submit</Button>
+          <Button
+            type="button"
+            onClick={() => this.props.history.push("/")}
+            className="cancel"
+          >
+            Cancel
+          </Button>
         </form>
-        
       </div>
-    )
+    );
   }
 }
 

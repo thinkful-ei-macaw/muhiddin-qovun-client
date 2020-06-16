@@ -18,10 +18,17 @@ export default class PostListPage extends Component {
   renderPosts() {
     const section = this.props.match.params.section;
     const { postList = [] } = this.context;
-    return postList.map((post) => {
-      if (post.section.toLowerCase() === section)
-        return <PostListItem key={post.post_id} post={post} />;
-    });
+    if (postList) {
+      return postList.map((post) => {
+        return post.section.toLowerCase() === section ? (
+          <PostListItem key={post.post_id} post={post} />
+        ) : (
+          ""
+        );
+      });
+    } else {
+      return "Loading...";
+    }
   }
 
   render() {
@@ -36,7 +43,7 @@ export default class PostListPage extends Component {
               this.props.history.push("/");
             }}
           >
-            Back
+            Go Back
           </button>
         </div>
         <Section list className="PostListPage">

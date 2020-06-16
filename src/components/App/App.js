@@ -12,11 +12,8 @@ import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import PostForm from "../../routes/PostForm/PostForm";
 import EditPost from "../../routes/EditPost/EditPost";
 import HomePageAfterLogin from "../../routes/HomePageAfterLogin/HomePageAfterLogin";
-
-import TokenService from "../../services/token-service";
-
-import "./App.css";
 import UserPosts from "../../routes/UserPosts/UserPosts";
+import "./App.css";
 
 class App extends Component {
   state = { hasError: false };
@@ -37,11 +34,8 @@ class App extends Component {
             <p className="red">There was an error! Oh no!</p>
           )}
           <Switch>
-            {TokenService.hasAuthToken() ? (
-              <PrivateRoute exact path={"/"} component={HomePageAfterLogin} />
-            ) : (
-              <PublicOnlyRoute exact path={"/"} component={HomePage} />
-            )}
+            <Route exact path={"/"} component={HomePage} />
+            <PrivateRoute exact path={"/home"} component={HomePageAfterLogin} />
             <Route exact path={"/view/:section"} component={PostListPage} />
             <PublicOnlyRoute exact path={"/login"} component={LoginPage} />
             <PrivateRoute exact path={"/add-post"} component={PostForm} />

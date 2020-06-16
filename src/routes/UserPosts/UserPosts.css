@@ -9,11 +9,11 @@
 }
 
 .back-post {
-  padding: 5px 10px;
-  border-radius: 10px;
+  padding: 10px 20px;
   border: none;
   background-color: white;
   outline: none;
+  font-size: 1.1em;
 }
 .back-post:hover {
   background-color: black;
