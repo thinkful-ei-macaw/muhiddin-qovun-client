@@ -15,12 +15,17 @@ export default class PostPage extends Component {
 
   state = {
     user_id: null,
+    error: null,
   };
 
   componentDidMount() {
-    AuthApiService.getUserInfo().then((res) => {
-      this.setState({ user_id: res.user_id });
-    });
+    if (TokenService.hasAuthToken()) {
+      AuthApiService.getUserInfo()
+        .then((res) => {
+          this.setState({ user_id: res.user_id });
+        })
+        .catch((error) => this.setState({ error }));
+    }
 
     const { post_id } = this.props.match.params;
     this.context.clearError();
