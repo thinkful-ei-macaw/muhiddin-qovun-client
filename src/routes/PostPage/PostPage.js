@@ -49,22 +49,9 @@ export default class PostPage extends Component {
     );
   }
 
-  handleDelete = () => {
-    const { post_id } = this.props.match.params;
-    PostApiService.deletePost(post_id)
-      .then(this.context.clearPost)
-      .catch(this.context.setError)
-      .then(() => this.props.history.push("/myposts"));
-  };
-
-  goBack = () => {
-    this.props.history.goBack();
-  };
-
   render() {
     const { error, post } = this.context;
     const username = this.state.user_name;
-    const section = this.context.post.section.toLowerCase();
     let content;
     if (error) {
       content =
@@ -91,15 +78,17 @@ export default class PostPage extends Component {
             {content}
             <Button
               className="back"
-              onClick={() => this.props.history.push(`/view/${section}`)}
+              onClick={() =>
+                this.props.history.push(
+                  `/view/${this.context.post.section.toLowerCase()}`
+                )
+              }
             >
               Back
             </Button>
           </Section>
         );
       }
-    } else {
-      console.log("loading");
     }
   }
 }

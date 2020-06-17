@@ -15,7 +15,7 @@ export default class PostListPage extends Component {
       .catch(this.context.setError);
   }
 
-  renderPosts() {
+  renderPosts = () => {
     const section = this.props.match.params.section;
     const { postList = [] } = this.context;
     if (postList) {
@@ -29,7 +29,7 @@ export default class PostListPage extends Component {
     } else {
       return "Loading...";
     }
-  }
+  };
 
   render() {
     const { error } = this.context;

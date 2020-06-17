@@ -17,6 +17,11 @@ class EditPost extends React.Component {
       .catch(this.context.setError);
   }
 
+  componentWillUnmount() {
+    this.context.clearError();
+    this.context.clearPost();
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
 
@@ -38,6 +43,29 @@ class EditPost extends React.Component {
       .catch(this.context.setError);
   };
 
+  handleDelete = () => {
+    const confirm = prompt(`Type "delete this post" to confirm!`);
+    if (confirm === "delete this post") {
+      alert(`You'll be redirected to "MY POSTS" page`);
+      const { post_id } = this.props.post
+        ? this.props.post
+        : this.props.match
+        ? this.props.match.params
+        : null;
+      PostApiService.deletePost(post_id)
+        .then(this.context.clearPost)
+        .catch(this.context.setError)
+        .then(() => this.props.history.push("/myposts"));
+    } else {
+      alert(`You have declined or entered wrong input`);
+    }
+  };
+
+  goBack = (event) => {
+    event.preventDefault();
+    this.props.history.goBack();
+    // window.location.reload(true);
+  };
   render() {
     const { post, error } = this.context;
     let sections = ["Jobs", "Events", "Apartments", "Cars", "Other"];
@@ -52,6 +80,7 @@ class EditPost extends React.Component {
             id="title"
             name="title"
             defaultValue={post.title}
+            required
           />
 
           <label htmlFor="post_category">Category:</label>
@@ -76,13 +105,13 @@ class EditPost extends React.Component {
             aria-label="Write your post description.."
             placeholder="Write your post description.."
             defaultValue={post.content}
+            required
           />
-          <Button className="submit">Submit</Button>
-          <Button
-            type="button"
-            onClick={() => this.props.history.push("/")}
-            className="cancel"
-          >
+          <Button className="submit button">Submit</Button>
+          <Button type="button" onClick={this.handleDelete} className="button">
+            Delete
+          </Button>
+          <Button type="button" onClick={this.goBack} className="cancel button">
             Cancel
           </Button>
         </form>

@@ -21,24 +21,3 @@
   height: 150px;
   resize: none;
 }
-
-.submit,
-.cancel {
-  background-color: #4caf50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.submit:hover,
-.cancel:hover {
-  background-color: green;
-  color: yellow;
-  font-size: 1.1em;
-}
-
-.cancel {
-  margin-left: 20px;
-}

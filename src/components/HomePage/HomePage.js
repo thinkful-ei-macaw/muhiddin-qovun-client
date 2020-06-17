@@ -10,12 +10,11 @@ export default class HomePage extends Component {
       sections: ["Events", "Jobs", "Apartments", "Cars", "Other"],
       value: "",
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.props.history.push("/view/" + event.target.value.toLowerCase());
-  }
+  };
 
   render() {
     return (
