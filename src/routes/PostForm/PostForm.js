@@ -18,7 +18,7 @@ class PostForm extends React.Component {
         title.value = "";
         section.value = "";
         content.value = "";
-        this.props.history.push(`/posts/${post.post_id}`);
+        this.props.history.push(`/myposts`);
       })
       .catch(this.context.setError);
   };

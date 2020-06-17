@@ -10,9 +10,9 @@ import LoginPage from "../../routes/LoginPage/LoginPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import PostForm from "../../routes/PostForm/PostForm";
-import EditPost from "../../routes/EditPost/EditPost";
 import HomePageAfterLogin from "../../routes/HomePageAfterLogin/HomePageAfterLogin";
 import UserPosts from "../../routes/UserPosts/UserPosts";
+import EditPost from "../../routes/EditPost/EditPost";
 import "./App.css";
 
 class App extends Component {
@@ -39,12 +39,8 @@ class App extends Component {
             <Route exact path={"/view/:section"} component={PostListPage} />
             <PublicOnlyRoute exact path={"/login"} component={LoginPage} />
             <PrivateRoute exact path={"/add-post"} component={PostForm} />
-            <PrivateRoute
-              exact
-              path={"/posts/edit/:post_id"}
-              component={EditPost}
-            />
             <PrivateRoute exact path={"/myposts"} component={UserPosts} />
+            <PrivateRoute exact path={"/edit/:post_id"} component={EditPost} />
             <PublicOnlyRoute
               exact
               path={"/register"}

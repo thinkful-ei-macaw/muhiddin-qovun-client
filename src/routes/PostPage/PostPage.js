@@ -5,6 +5,7 @@ import TokenService from "../../services/token-service";
 import { Section, Button } from "../../components/Utils/Utils";
 import "./PostPage.css";
 import AuthApiService from "../../services/auth-api-service";
+import { Redirect } from "react-router-dom";
 
 export default class PostPage extends Component {
   static defaultProps = {
@@ -14,15 +15,15 @@ export default class PostPage extends Component {
   static contextType = PostContext;
 
   state = {
-    user_id: null,
-    error: null,
+    user_name: "",
+    error: "",
   };
 
   componentDidMount() {
     if (TokenService.hasAuthToken()) {
       AuthApiService.getUserInfo()
         .then((res) => {
-          this.setState({ user_id: res.user_id });
+          this.setState({ user_name: res.user_name });
         })
         .catch((error) => this.setState({ error }));
     }
@@ -56,9 +57,14 @@ export default class PostPage extends Component {
       .then(() => this.props.history.push("/myposts"));
   };
 
+  goBack = () => {
+    this.props.history.goBack();
+  };
+
   render() {
     const { error, post } = this.context;
-    const user_id = this.state.user_id;
+    const username = this.state.user_name;
+    const section = this.context.post.section.toLowerCase();
     let content;
     if (error) {
       content =
@@ -72,58 +78,28 @@ export default class PostPage extends Component {
     } else {
       content = this.renderPost();
     }
-    if (TokenService.hasAuthToken()) {
-      return (
-        <Section className="PostPage">
-          {content}
-          <div>
-            {user_id === post.user_id ? (
-              <div className="buttons">
-                <Button
-                  className="back-button"
-                  onClick={() => this.props.history.goBack()}
-                >
-                  Back
-                </Button>
-                <Button
-                  className="edit-button"
-                  onClick={() =>
-                    this.props.history.push(`/posts/edit/${post.post_id}`)
-                  }
-                >
-                  Edit
-                </Button>
-                <Button className="delete-button" onClick={this.handleDelete}>
-                  Delete
-                </Button>
-              </div>
-            ) : (
-              <Button
-                className="back-button"
-                onClick={() => this.props.history.goBack()}
-              >
-                Back
-              </Button>
-            )}
-          </div>
-        </Section>
-      );
+    if (post) {
+      if (TokenService.hasAuthToken() && username === post.user_name) {
+        return (
+          <Section className="PostPage">
+            <Redirect to={`/edit/${post.post_id}`} />
+          </Section>
+        );
+      } else {
+        return (
+          <Section className="PostPage">
+            {content}
+            <Button
+              className="back"
+              onClick={() => this.props.history.push(`/view/${section}`)}
+            >
+              Back
+            </Button>
+          </Section>
+        );
+      }
     } else {
-      return (
-        <Section className="PostPage">
-          {content}
-          <Button
-            className="back"
-            onClick={() =>
-              this.props.history.push(
-                `/view/${this.context.post.section.toLowerCase()}`
-              )
-            }
-          >
-            Back
-          </Button>
-        </Section>
-      );
+      console.log("loading");
     }
   }
 }

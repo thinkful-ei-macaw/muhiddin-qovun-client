@@ -3,10 +3,14 @@ import PostContext from "../../contexts/PostContext";
 import PostApiService from "../../services/post-api-service";
 import { Button } from "../../components/Utils/Utils";
 
-class PostForm extends React.Component {
+class EditPost extends React.Component {
   static contextType = PostContext;
   componentDidMount() {
-    const { post_id } = this.props.match.params;
+    const { post_id } = this.props.post
+      ? this.props.post
+      : this.props.match
+      ? this.props.match.params
+      : null;
     this.context.clearError();
     PostApiService.getPost(post_id)
       .then(this.context.setPost)
@@ -17,7 +21,11 @@ class PostForm extends React.Component {
     event.preventDefault();
 
     const { title, content, section } = event.target;
-    const { post_id } = this.props.match.params;
+    const { post_id } = this.props.post
+      ? this.props.post
+      : this.props.match
+      ? this.props.match.params
+      : null;
 
     PostApiService.editPost(title.value, section.value, content.value, post_id)
       .then(this.context.addPost)
@@ -25,7 +33,7 @@ class PostForm extends React.Component {
         title.value = "";
         section.value = "";
         content.value = "";
-        this.props.history.push(`/posts/${post_id}`);
+        this.props.history.goBack();
       })
       .catch(this.context.setError);
   };
@@ -83,4 +91,4 @@ class PostForm extends React.Component {
   }
 }
 
-export default PostForm;
+export default EditPost;
